@@ -31,9 +31,3 @@ while True:
             print("Digite números inteiros separados por espaço!")
         continue
 
-
-
-
-
-    print(f"N:{N}")
-    print(f"M:{M}")
