@@ -1,8 +1,7 @@
 list=[]
 
 while True:
-    list = input("").split(" ")
-    print(f"Tamanho da Lista:{len(list)}")
+    list = input("").split()
     try:
         N=int(list[0])
         M=int(list[1])
@@ -22,13 +21,14 @@ while True:
         elif M > 104:
             print("Número de clientes não pode ser maior que 104!\nDigite novamente.")
             continue
+        else:
+            break
 
-
-
-
-
-    except ValueError:
-        print("Digite números inteiros separados por espaço!")
+    except:
+        if not list:
+            print("Precisa conter dois números!")
+        else:
+            print("Digite números inteiros separados por espaço!")
         continue
 
 
