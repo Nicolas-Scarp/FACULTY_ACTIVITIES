@@ -31,3 +31,12 @@ while True:
             print("Digite números inteiros separados por espaço!")
         continue
 
+list2=[]
+
+while True:
+    list2 = input("").split()
+    if len(list2) != N:
+        print("Valores insuficientes!\nTente Novamente.")
+        continue
+    else:
+        break
