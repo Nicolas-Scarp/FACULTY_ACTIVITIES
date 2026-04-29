@@ -31,11 +31,27 @@ while True:
             print("Digite números inteiros separados por espaço!")
         continue
 
-list2=[]
-vi = []
+
+parar=False
 
 while True:
+
+    mini=0
+    maxi=0
+    list2=[]
+    vi = []
+
+    if parar == True:
+        break
     list2 = input("").split()
+
+    try:
+        for i in range(len(list2)):
+            valor=int(list2[i])
+    except:
+        print("Digite números!")
+        continue
+
     if len(list2) < N:
         print("Valores insuficientes!\nTente Novamente.")
         continue
@@ -45,34 +61,75 @@ while True:
     else:
         for i in range(len(list2)):
             vi.append(int(list2[i]))
-            break
+        for i in range(len(vi)):
+            if vi[i] < 1:
+                mini=mini+1
+                continue
+            elif vi[i] > 100:
+                maxi=maxi+1
+                continue
+            else:
+                continue
+        while True:
+            if mini != 0 or maxi != 0:
+                print("Tempo precisa ser entre 1 e 100!\nDigite novamente.")
+                break
+            else:
+                parar = True
+                break
+
+parar=False
+
+while True:
+
+    mini2=0
+    maxi2=0
+    list3=[]
+    vi2 = []
+
+    if parar == True:
         break
+    list3 = input("").split()
 
-mini=0
-maxi=0
-
-for i in range(len(vi)):
-
-    if vi[i] < 1:
-        mini=mini+1
-        
+    try:
+        for i in range(len(list3)):
+            valor=int(list3[i])
+    except:
+        print("Digite números!")
         continue
-    elif vi[i] > 100:
-        maxi=maxi+1
-        
+
+    if len(list3) < M:
+        print("Valores insuficientes!\nTente Novamente.")
+        continue
+    elif len(list3) > M:
+        print("Mais valores que o esperado!\nTente Novamente.")
         continue
     else:
-        break
-    
+        for i in range(len(list3)):
+            vi2.append(int(list3[i]))
+        for i in range(len(vi2)):
+            if vi2[i] < 1:
+                mini2=mini2+1
+                continue
+            elif vi2[i] > 100:
+                maxi2=maxi2+1
+                continue
+            else:
+                continue
+        while True:
+            if mini2 != 0 or maxi2 != 0:
+                print("A quantidade de itens precisa ser entre 1 e 100!\nDigite novamente.")
+                break
+            else:
+                parar = True
+                break
 
-print(mini)
-print(maxi)
 
 
 
-print("Tempo não pode ser menor que 1!\nDigite novamente.")
 
-print("Tempo não pode ser maior que 100!\nDigite novamente.")            
+
+       
             
 
 
