@@ -31,8 +31,8 @@ while True:
             print("Digite números inteiros separados por espaço!")
         continue
 
-
 parar=False
+temp=[]
 
 while True:
 
@@ -76,9 +76,11 @@ while True:
                 break
             else:
                 parar = True
+                temp=vi
                 break
 
 parar=False
+itens=[]
 
 while True:
 
@@ -121,14 +123,36 @@ while True:
                 print("A quantidade de itens precisa ser entre 1 e 100!\nDigite novamente.")
                 break
             else:
+                itens=vi2
                 parar = True
                 break
 
+soma = 0
+soma_list = []
 
+while True:
+    if N < M:
+        for i in range(N):
+            soma_list.append(temp[i]*itens[i])
 
+        break
 
+    elif M < N:
+        for i in range(M):
+            soma_list.append(temp[i]*itens[i])
+        for i in range(soma_list):
+            soma = soma + soma_list[i]
+        break
 
+    else:
+        for i in range(N):
+            soma = soma + temp[i]*itens[i]
+        for i in range(soma_list):
+            soma = soma + soma_list[i]
+        break
 
+print(soma_list)
+print(soma)
        
             
 
