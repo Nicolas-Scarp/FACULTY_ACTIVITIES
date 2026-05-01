@@ -133,21 +133,26 @@ soma_list = []
 while True:
     if N < M:
         for i in range(N):
-            soma_list.append(temp[i]*itens[i])
-
+            soma_list.append(temp[i]*itens[i]) 
+        for i in range(M):
+            if len(soma_list) != M:
+                soma_list.append((temp[soma_list.index(min(soma_list))])*itens[i+N])           
+                break
+        for i in range(len(soma_list)):
+            soma = soma + soma_list[i]
         break
-
+        
     elif M < N:
         for i in range(M):
             soma_list.append(temp[i]*itens[i])
-        for i in range(soma_list):
+        for i in range(len(soma_list)):
             soma = soma + soma_list[i]
         break
 
     else:
         for i in range(N):
             soma = soma + temp[i]*itens[i]
-        for i in range(soma_list):
+        for i in range(len(soma_list)):
             soma = soma + soma_list[i]
         break
 
