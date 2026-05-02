@@ -136,8 +136,9 @@ while True:
             soma_list.append(temp[i]*itens[i]) 
         for i in range(M):
             if len(soma_list) != M:
-                soma_list.append((temp[soma_list.index(min(soma_list))])*itens[i+N])           
-                break
+                soma_list.append((temp[soma_list.index(min(soma_list))])*itens[i+N])
+                
+
         for i in range(len(soma_list)):
             soma = soma + soma_list[i]
         break
@@ -158,8 +159,6 @@ while True:
 
 print(soma_list)
 print(soma)
-       
-            
 
 
 
